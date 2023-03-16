@@ -1,0 +1,12 @@
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier primitives\TestRPG\TestRPG\bin\Debug\TestRPG.exe.config
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier primitives\TestRPG\TestRPG\bin\Debug\TestRPG.exe
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier primitives\TestRPG\TestRPG\bin\Debug\TestRPG.pdb
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier primitives\TestRPG\TestRPG\obj\Debug\TestRPG.exe
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier primitives\TestRPG\TestRPG\obj\Debug\TestRPG.pdb
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier primitives\TestRPG\TestRPG\obj\Debug\TestRPG.csprojResolveAssemblyReference.cache
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier CSharp\TestRPG\TestRPG\bin\Debug\TestRPG.exe.config
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.exe
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.pdb
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier CSharp\TestRPG\TestRPG\bin\Debug\TestRPG.exe
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier CSharp\TestRPG\TestRPG\bin\Debug\TestRPG.pdb
+C:\Users\dmeke\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.csprojResolveAssemblyReference.cache
