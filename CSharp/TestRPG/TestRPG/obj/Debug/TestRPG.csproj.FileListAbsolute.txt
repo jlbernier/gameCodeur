@@ -17,3 +17,11 @@ E:\Dropbox-David\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIU
 E:\Dropbox-David\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.csproj.CoreCompileInputs.cache
 E:\Dropbox-David\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.exe
 E:\Dropbox-David\Dropbox\Cours création de jeux vidéo\_Sources Ateliers PREMIUM\Monogame\Atelier CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.pdb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TestRPG\TestRPG\bin\Debug\TestRPG.exe.config
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TestRPG\TestRPG\bin\Debug\TestRPG.exe
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TestRPG\TestRPG\bin\Debug\TestRPG.pdb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.csproj.AssemblyReference.cache
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.csproj.SuggestedBindingRedirects.cache
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.csproj.CoreCompileInputs.cache
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.exe
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TestRPG\TestRPG\obj\Debug\TestRPG.pdb

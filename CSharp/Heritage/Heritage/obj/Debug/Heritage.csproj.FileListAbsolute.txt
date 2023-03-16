@@ -1,0 +1,8 @@
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Heritage\Heritage\obj\Debug\Heritage.csproj.AssemblyReference.cache
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Heritage\Heritage\obj\Debug\Heritage.csproj.SuggestedBindingRedirects.cache
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Heritage\Heritage\obj\Debug\Heritage.csproj.CoreCompileInputs.cache
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Heritage\Heritage\bin\Debug\Heritage.exe.config
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Heritage\Heritage\bin\Debug\Heritage.exe
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Heritage\Heritage\bin\Debug\Heritage.pdb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Heritage\Heritage\obj\Debug\Heritage.exe
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Heritage\Heritage\obj\Debug\Heritage.pdb
