@@ -15,7 +15,13 @@ namespace Heritage
         }
         public override void Attack()
         {
+            base.Attack();
+            Console.WriteLine("Je suis un barbare et j'attaque !");
+        }
+        public override void Attaque()
+        {
             Console.WriteLine("Je suis un barbare et j'attaque !");
         }
     }
 }
+                                                

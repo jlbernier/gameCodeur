@@ -17,7 +17,12 @@ namespace Heritage
         {
             Console.WriteLine("Je lance le sort : " + pSpell);
         }
-        public override void Attack()
+        public override void Attack()  
+        {
+            base.Attack();
+            Console.WriteLine("Je suis un druide et j'attaque !");
+        }
+        public override void Attaque()
         {
             Console.WriteLine("Je suis un druide et j'attaque !");
         }

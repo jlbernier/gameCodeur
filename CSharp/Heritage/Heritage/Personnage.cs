@@ -8,16 +8,20 @@ namespace Heritage
 {
     abstract class Personnage
     {
-        public string name { get; protected set; }
+        public string name { public get; protected set; }
         public int totalPointsOfLife;
         protected string dicePointsOfLife;
-        
+
         public Personnage(string pName)
         {
-            Console.WriteLine("Je suis un nouveau personnage mon nom est "+pName);
+            Console.WriteLine("Je suis un nouveau personnage mon nom est " + pName);
             name = pName;
             dicePointsOfLife = "";
         }
-        public abstract void Attack();
+        public abstract void Attaque();
+        public virtual void Attack()
+        {
+        Console.WriteLine("Initialisation de l'attaque ! ");
+        }
     }
 }

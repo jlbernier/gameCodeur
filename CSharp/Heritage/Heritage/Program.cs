@@ -10,11 +10,15 @@ namespace Heritage
     {
         static void Main(string[] args)
         {
-            Barbarian monBarbare = new Barbarian("Conan");
-            Druid monDruide = new Druid("Jaheira");
-            monDruide.LancerUnSort("eclair");
-            Console.WriteLine("Le nom du personnage est " + monBarbare.name);
-            monBarbare.Attack();
+            Barbarian myBarbarian = new Barbarian("Conan");
+            Druid myDruid = new Druid("Jaheira");
+            List<Personnage> myListe = new List<Personnage>();
+            myListe.Add(myDruid);
+            myListe.Add(myBarbarian);
+            foreach (Personnage perso in myListe)
+            {
+                perso.Attack();
+            }
             Console.ReadKey();
 
         }
