@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KWXw07aYhCfq5EL3pN6tf/JjJ+Xa9oSL3CxL3hkpJ1iKeB3TudrfCigOiDtFTBjQvo19Pm6wX1yOJHSQ6s/sww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\33677\\Documents\\projets\\git\\gameCodeur\\CSharp\\Game1\\Game1\\Game1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\33677\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\33677\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}

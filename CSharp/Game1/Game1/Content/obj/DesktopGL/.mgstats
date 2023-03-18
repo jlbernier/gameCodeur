@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Game1/Game1/Content/personnage.png","C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Game1/Game1/Content/bin/DesktopGL/personnage.xnb","TextureProcessor","Texture2DContent",2706,24373,0,1616935
+"C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Game1/Game1/Content/slimePurple.png","C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Game1/Game1/Content/bin/DesktopGL/slimePurple.xnb","TextureProcessor","Texture2DContent",3068,65621,0,0037924
