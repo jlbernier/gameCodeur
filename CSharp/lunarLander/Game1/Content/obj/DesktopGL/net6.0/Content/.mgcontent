@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/engine.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/metalPanel.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/personnage.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/ship.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/slimePurple.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/slimePurple2.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/urban_scrolling0.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/urban_scrolling1.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/urban_scrolling2.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/lunarLander/Game1/Content/urban_scrolling3.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
