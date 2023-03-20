@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/SonsEtMusiques/SonsEtMusiques/Content/cool.mp3</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/SonsEtMusiques/SonsEtMusiques/Content/sfx_movement_jump13.wav</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/SonsEtMusiques/SonsEtMusiques/Content/sfx_movement_jump13_landing.wav</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/SonsEtMusiques/SonsEtMusiques/Content/techno.mp3</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

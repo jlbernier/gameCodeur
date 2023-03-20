@@ -1,5 +1,0 @@
-C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\LunarLander\LunarLander\obj\Debug\net6.0\LunarLander.csproj.AssemblyReference.cache
-C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\LunarLander\LunarLander\obj\Debug\net6.0\LunarLander.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\LunarLander\LunarLander\obj\Debug\net6.0\LunarLander.AssemblyInfoInputs.cache
-C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\LunarLander\LunarLander\obj\Debug\net6.0\LunarLander.AssemblyInfo.cs
-C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\LunarLander\LunarLander\obj\Debug\net6.0\LunarLander.csproj.CoreCompileInputs.cache
