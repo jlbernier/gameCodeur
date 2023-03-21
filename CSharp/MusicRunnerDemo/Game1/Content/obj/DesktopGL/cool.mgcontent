@@ -3,7 +3,7 @@
   <SourceFile>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MusicRunnerDemo/Game1/Content/../../../../../../codes gamecodeur/MusicRunnerDemo/MusicRunnerDemo/Content/cool.mp3</SourceFile>
   <SourceTime>2023-03-19T17:00:32.9988795+01:00</SourceTime>
   <DestFile>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MusicRunnerDemo/Game1/Content/bin/DesktopGL/cool.xnb</DestFile>
-  <DestTime>2023-03-20T10:06:36.6818427+01:00</DestTime>
+  <DestTime>2023-03-20T16:16:53.4351973+01:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>SongProcessor</Processor>

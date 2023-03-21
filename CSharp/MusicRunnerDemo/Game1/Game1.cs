@@ -19,9 +19,11 @@ namespace Game1
         Texture2D imgBackground0;
         Texture2D imgBackground1;
         Texture2D imgHeroSheet;
+        Texture2D imgHeroSheet2;
         Background background0;
         Background background1;
         SpriteRunner sprHero;
+        SpriteRunner sprHero2;
         KeyboardState oldKBState;
         Vector2 ScreenSize;
         // Musics and Sounds
@@ -70,17 +72,29 @@ namespace Game1
             imgBackground0 = Content.Load<Texture2D>("forest");
             imgBackground1 = Content.Load<Texture2D>("volcano");
             imgHeroSheet = Content.Load<Texture2D>("herosheet");
+            imgHeroSheet2 = Content.Load<Texture2D>("canvas");
 
             background0 = new Background(imgBackground0, -5);
             background1 = new Background(imgBackground1, -5);
             SoundEffect sndJump = Content.Load<SoundEffect>("sfx_movement_jump13");
             SoundEffect sndLanding = Content.Load<SoundEffect>("sfx_movement_jump13_landing");
-            sprHero = new SpriteRunner(spriteBatch, imgHeroSheet);
+            sprHero = new SpriteRunner(spriteBatch, imgHeroSheet, 20, 20, 0);
             sprHero.SetSounds(sndJump, sndLanding);
-            sprHero.AjouteAnimation("run", new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, 1f / 12f);
+            sprHero.AjouteAnimation("run", new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, 1f / 12f, true, 0);
             sprHero.LanceAnimation("run");
             sprHero.x = ScreenSize.X / 4;
             sprHero.SetGroundPosition((int)ScreenSize.Y - 25);
+
+            // essai 2 heros
+            sprHero2 = new SpriteRunner(spriteBatch, imgHeroSheet2, 64, 64, 704);
+            sprHero2.SetSounds(sndJump, sndLanding);
+            //sprHero2.AjouteAnimation("canvas", new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8 }, 1f / 12f, true, 704);
+            sprHero2.AjouteAnimation("canvas", new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8 }, 1f / 12f, true, 640-64-64);
+            sprHero2.LanceAnimation("canvas");
+            sprHero2.x = ScreenSize.X / 3;
+            sprHero2.SetGroundPosition((int)ScreenSize.Y - 25);
+
+
 
             // Load musics and sounds
             musicCool = Content.Load<Song>("cool");

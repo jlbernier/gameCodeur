@@ -16,13 +16,15 @@ namespace MusicRunnerDemo
         public float dureeFrame { get; private set; }
         public bool isLoop { get; set; }
         public bool isFinished { get; set; }
-        public GCSAnimation(string pName, int[] pFrames, float pTime = 1f / 12f, bool pisLoop = true)
+        public int decalageY { get; private set; }
+        public GCSAnimation(string pName, int[] pFrames, float pTime = 1f / 12f, bool pisLoop = true, int pdecalageY = 0)
         {
             name = pName;
             frames = pFrames;
-            dureeFrame = pTime;
+            dureeFrame = pTime;     
             isLoop = pisLoop;
             isFinished = false;
+            decalageY = pdecalageY;
         }
     }
     class GCSprite
@@ -48,6 +50,8 @@ namespace MusicRunnerDemo
 
         static public List<GCSprite> lstSprites = new List<GCSprite>();
 
+        
+
         static public void DrawAll(GameTime pGametime)
         {
             foreach (var sprite in GCSprite.lstSprites)
@@ -64,7 +68,7 @@ namespace MusicRunnerDemo
             }
         }
 
-        public GCSprite(SpriteBatch pSpriteBatch, Texture2D pTexture, int pLargeurFrame, int pHauteurFrame)
+        public GCSprite(SpriteBatch pSpriteBatch, Texture2D pTexture, int pLargeurFrame, int pHauteurFrame, int pDecalageY)
         {
             spriteBatch = pSpriteBatch;
             texture = pTexture;
@@ -80,6 +84,7 @@ namespace MusicRunnerDemo
             lstSprites.Add(this);
             properties = new Dictionary<string, string>();
             Velocity = Vector2.Zero;
+            //decalageY = pDecalage;
         }
 
         public string getProperty(string pName)
@@ -91,9 +96,9 @@ namespace MusicRunnerDemo
             return "";
         }
 
-        public void AjouteAnimation(string pName, int[] pFrames, float pDureeFrame, bool pisLoop = true)
+        public void AjouteAnimation(string pName, int[] pFrames, float pDureeFrame, bool pisLoop = true, int pDecalageY = 0)
         {
-            GCSAnimation animation = new GCSAnimation(pName, pFrames, pDureeFrame, pisLoop);
+            GCSAnimation animation = new GCSAnimation(pName, pFrames, pDureeFrame, pisLoop, pDecalageY);
             animations.Add(animation);
         }
 
@@ -123,7 +128,7 @@ namespace MusicRunnerDemo
             if (animationCourante == null) return;
             if (animationCourante.dureeFrame == 0) return;
             if (animationCourante.isFinished) return;
-
+            //decalageY = animationCourante.decalageY;
             time += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (time > animationCourante.dureeFrame)
             {
@@ -148,8 +153,8 @@ namespace MusicRunnerDemo
         public virtual void Draw(GameTime gameTime)
         {
             if (!isVisible) return;
-
-            Rectangle source = new Rectangle(animationCourante.frames[frame] * largeurFrame, 0, largeurFrame, hauteurFrame);
+            Debug.WriteLine(" decalage y = " + animationCourante.decalageY);
+            Rectangle source = new Rectangle(animationCourante.frames[frame] * largeurFrame, animationCourante.decalageY, largeurFrame, hauteurFrame);
             Vector2 origine = new Vector2(0, 0);
 
             if (isCentered)

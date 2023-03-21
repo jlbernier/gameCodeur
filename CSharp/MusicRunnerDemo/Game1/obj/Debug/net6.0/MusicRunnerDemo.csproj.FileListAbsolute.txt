@@ -42,3 +42,4 @@ C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MusicRunnerDemo\Game1\obj
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MusicRunnerDemo\Game1\obj\Debug\net6.0\MusicRunnerDemo.pdb
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MusicRunnerDemo\Game1\obj\Debug\net6.0\MusicRunnerDemo.genruntimeconfig.cache
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MusicRunnerDemo\Game1\obj\Debug\net6.0\ref\MusicRunnerDemo.dll
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MusicRunnerDemo\Game1\bin\Debug\net6.0\Content\canvas.xnb

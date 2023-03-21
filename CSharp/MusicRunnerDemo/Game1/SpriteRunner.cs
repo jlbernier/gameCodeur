@@ -17,7 +17,7 @@ namespace MusicRunnerDemo
         private SoundEffect _sndJump;
         private SoundEffect _sndLanding;
         private int _GroundPosition;
-        public SpriteRunner(SpriteBatch pSpriteBatch, Texture2D pTexture) : base(pSpriteBatch, pTexture, 20, 20)
+        public SpriteRunner(SpriteBatch pSpriteBatch, Texture2D pTexture, int pX, int pY, int pDecalageY) : base(pSpriteBatch, pTexture, pX, pY, pDecalageY = 0)
         {
             Jumping = false;
             Gravity = 10;
