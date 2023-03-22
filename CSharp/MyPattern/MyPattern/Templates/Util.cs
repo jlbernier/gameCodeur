@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Templates;
 
 namespace MTemplates
 {
@@ -17,5 +18,9 @@ namespace MTemplates
         {
             return RandomGen.Next(pMin, pMax + 1);
         }
+    }
+    public static bool CollideByBox(IActor p1,  IActor p2)
+    {
+        return p1.BoundingBox.Intersects(p2.BoundingBox);
     }
 }

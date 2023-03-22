@@ -52,16 +52,15 @@ namespace MyPattern
             Rectangle Screen = mainGame.Window.ClientBounds; // taille de la fenetre de jeu
 
             for (int i = 0; i < 20; i++)
-                {
-                    Meteor m = new  Meteor(mainGame.Content.Load<Texture2D>("meteor"));
-                    m.Position = new Vector2(
-                        Util.GetInt(1, Screen.Width - m.Texture.Width),
-                        Util.GetInt(1, Screen.Height - m.Texture.Height)
-                        );
-                    listActors.Add(m);
-                }
-
-                MyShip = new Hero(mainGame.Content.Load<Texture2D>("ship"));
+            {
+                Meteor m = new Meteor(mainGame.Content.Load<Texture2D>("meteor"));
+                m.Position = new Vector2(
+                    Util.GetInt(1, Screen.Width - m.Texture.Width),
+                    Util.GetInt(1, Screen.Height - m.Texture.Height)
+                    );
+                listActors.Add(m);
+            }
+            MyShip = new Hero(mainGame.Content.Load<Texture2D>("ship"));
             MyShip.Position = new Vector2(
                 Screen.Width / 2 - MyShip.Texture.Width / 2,
                 Screen.Height / 2 - MyShip.Texture.Height / 2);

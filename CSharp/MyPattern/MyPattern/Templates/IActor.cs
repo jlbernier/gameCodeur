@@ -14,5 +14,6 @@ namespace Templates
         Rectangle BoundingBox { get; }
         void Update(GameTime pGameTime);
         void Draw(SpriteBatch pSpriteBatch);
+        void TouchBy(IActor pBy);
     }
 }
