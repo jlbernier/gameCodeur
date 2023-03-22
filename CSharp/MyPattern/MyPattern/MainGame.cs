@@ -49,13 +49,13 @@ namespace MyPattern
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-
+            spriteBatch.Begin();
             // TODO: Add your drawing code here
             if (gameState.CurrentScene != null)
             {
                 gameState.CurrentScene.Draw(gameTime);
             }
-            
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

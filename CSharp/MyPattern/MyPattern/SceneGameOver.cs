@@ -35,11 +35,9 @@ namespace MyPattern
         public override void Draw(GameTime gameTime)
         {
             Debug.WriteLine("SceneGameOver.Draw");
-            mainGame.spriteBatch.Begin();
-            mainGame.spriteBatch.DrawString(AssetManager.MainFont,
+             mainGame.spriteBatch.DrawString(AssetManager.MainFont,
                 "This is the GameOver", new Vector2(1, 1), Color.White);
-            mainGame.spriteBatch.End();
-            base.Draw(gameTime);
+           base.Draw(gameTime);
         }
 
 

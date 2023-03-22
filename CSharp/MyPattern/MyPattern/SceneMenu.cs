@@ -31,6 +31,11 @@ namespace MyPattern
         }
         public override void Update(GameTime gameTime)
         {
+            MouseState newMouseState = Mouse.GetState();
+            if (newMouseState.LeftButton == ButtonState.Pressed)
+            {
+
+            }
             KeyboardState newKeyboardState = Keyboard.GetState();
              if (Keyboard.GetState().IsKeyDown(Keys.Enter) && !oldKeyboardState.IsKeyDown(Keys.Enter))
             {
@@ -45,12 +50,9 @@ namespace MyPattern
 
         public override void Draw(GameTime gameTime)
         {
-            //Debug.WriteLine("SceneMenu.Draw");
-            mainGame.spriteBatch.Begin();
             mainGame.spriteBatch.DrawString(AssetManager.MainFont,
                 "This is the menu", new Vector2(1,1), Color.White);
-            mainGame.spriteBatch.End();
-            base.Draw(gameTime);
+              base.Draw(gameTime);
         }
 
 

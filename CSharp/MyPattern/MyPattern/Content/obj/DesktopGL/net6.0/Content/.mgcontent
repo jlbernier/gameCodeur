@@ -4,9 +4,21 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/../../../../../../codes gamecodeur/_fichiers nécessaires_/button.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/../../../../../../codes gamecodeur/_fichiers nécessaires_/cool.mp3</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/../../../../../../codes gamecodeur/_fichiers nécessaires_/explode.wav</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/../../../../../../codes gamecodeur/_fichiers nécessaires_/meteor.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/../../../../../../codes gamecodeur/_fichiers nécessaires_/techno.mp3</File>
     <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/mainfont.spritefont</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/ship.png</File>
   </SourceFiles>
   <DestFiles>
+    <File>button.png</File>
+    <File>cool.mp3</File>
+    <File>explode.wav</File>
+    <File>meteor.png</File>
+    <File>techno.mp3</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

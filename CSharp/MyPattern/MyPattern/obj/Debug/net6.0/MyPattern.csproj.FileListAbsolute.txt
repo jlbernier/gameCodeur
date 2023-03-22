@@ -24,3 +24,11 @@ C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\obj\D
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\obj\Debug\net6.0\MyPattern.genruntimeconfig.cache
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\obj\Debug\net6.0\ref\MyPattern.dll
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\mainfont.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\button.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\cool.ogg
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\cool.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\explode.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\meteor.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\ship.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\techno.ogg
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\techno.xnb

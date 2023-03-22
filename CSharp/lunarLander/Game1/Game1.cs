@@ -59,7 +59,7 @@ namespace Game1
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        private SpriteBatch spriteBatch;
         Texture2D imgBackground0;
         Texture2D imgBackground1;
         Texture2D imgBackground2;
@@ -97,7 +97,7 @@ namespace Game1
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
 
@@ -242,10 +242,10 @@ namespace Game1
 
         private void AfficheBackground(Background pBackground)
         {
-            _spriteBatch.Draw(pBackground.Image, pBackground.Position, null, Color.White);
+            spriteBatch.Draw(pBackground.Image, pBackground.Position, null, Color.White);
             if (pBackground.Position.X < 0)
             {
-                _spriteBatch.Draw(pBackground.Image, new Vector2(pBackground.Position.X + pBackground.Image.Width, 0), null, Color.White);
+                spriteBatch.Draw(pBackground.Image, new Vector2(pBackground.Position.X + pBackground.Image.Width, 0), null, Color.White);
             }
 
         }
@@ -253,7 +253,7 @@ namespace Game1
         {
             SpriteEffects effect = SpriteEffects.None;
             GraphicsDevice.Clear(Color.Black);
-            _spriteBatch.Begin();
+            spriteBatch.Begin();
             Lander myLander = landerList[0];
             // TODO: Add your drawing code here
             //_spriteBatch.Draw(imgBackground, bgPosition, null, Color.White);
@@ -266,12 +266,12 @@ namespace Game1
             //_spriteBatch.Draw(myLander.img, myLander.position, null, Color.White, 0.0f, orinImg, new Vector2(1.0f, 1.0f), effect, 0);
             // one lander only
             Vector2 orinImgOneLander = new Vector2(oneLander.img.Width / 2, oneLander.img.Height / 2);
-            _spriteBatch.Draw(oneLander.img, oneLander.position, null, Color.White, MathHelper.ToRadians(oneLander.angle), orinImgOneLander, new Vector2(1.0f, 1.0f), effect, 0);
+            spriteBatch.Draw(oneLander.img, oneLander.position, null, Color.White, MathHelper.ToRadians(oneLander.angle), orinImgOneLander, new Vector2(1.0f, 1.0f), effect, 0);
             //Engine
             if (oneLander.engineOn)
             {
                 Vector2 orinEngineImgOneLander = new Vector2(oneLander.imgEngine.Width / 2, oneLander.imgEngine.Height / 2);
-                _spriteBatch.Draw(oneLander.imgEngine, oneLander.position, null, Color.White, MathHelper.ToRadians(oneLander.angle), orinEngineImgOneLander, new Vector2(1.0f, 1.0f), effect, 0);
+                spriteBatch.Draw(oneLander.imgEngine, oneLander.position, null, Color.White, MathHelper.ToRadians(oneLander.angle), orinEngineImgOneLander, new Vector2(1.0f, 1.0f), effect, 0);
             }
             /* AfficheBackground(background0);
              AfficheBackground(background1);
@@ -287,7 +287,7 @@ namespace Game1
                _spriteBatch.Draw(item.img, item.position, null, item.colorSlim, 0, new Vector2(0, 0), new Vector2(item.scale, item.scale), effect, 0);
 
            }*/
-            _spriteBatch.End();
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
