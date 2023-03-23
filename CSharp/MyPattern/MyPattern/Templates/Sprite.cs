@@ -19,15 +19,23 @@ namespace Templates
         public float velovityY;
         //Sprite
         public Texture2D Texture { get; }
+        public bool ToRemove { get; set; }
+
         public Sprite(Texture2D pTexture) 
         {
             Texture = pTexture;
+            ToRemove = false;
         }
         public void Move(float pX, float pY)
         {
             Position = new Vector2(Position.X + pX,Position.Y + pY);
         }
- 
+        public virtual void TouchBy(IActor pBy)
+        {
+
+        }
+
+
         public virtual void Update(GameTime pGameTime)
         {
             Move(velovityX, velovityY);

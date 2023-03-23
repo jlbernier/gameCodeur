@@ -17,6 +17,10 @@ namespace Templates
             mainGame = pGame;
             listActors = new List<IActor>();
         }
+        public void Clean()
+        {
+            listActors.RemoveAll(item => item.ToRemove == true);
+        }
         public virtual void Load()
         {
 

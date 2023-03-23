@@ -15,5 +15,6 @@ namespace Templates
         void Update(GameTime pGameTime);
         void Draw(SpriteBatch pSpriteBatch);
         void TouchBy(IActor pBy);
+        bool ToRemove { get; set; }
     }
 }

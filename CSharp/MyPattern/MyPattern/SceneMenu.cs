@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,6 +17,7 @@ namespace MyPattern
         private KeyboardState oldKeyboardState;
         private GamePadState oldGamePadState;
         private Button MyButton;
+        private Song music;
         public SceneMenu(MainGame pGame) : base(pGame)
         {
             Debug.WriteLine("New SceneMenu");
@@ -28,6 +30,9 @@ namespace MyPattern
         {
             oldKeyboardState = Keyboard.GetState();
             Rectangle Screen = mainGame.Window.ClientBounds;
+            music = mainGame.Content.Load<Song>("cool");
+            MediaPlayer.Play(music);
+            MediaPlayer.IsRepeating = true;
 
             MyButton = new Button(mainGame.Content.Load<Texture2D>("button"));
             MyButton.Position = new Vector2(
@@ -42,7 +47,7 @@ namespace MyPattern
 
         public override void UnLoad()
         {
-            Debug.WriteLine("SceneMenu.UnLoad");
+            MediaPlayer.Stop();
             base.UnLoad();
         }
         public override void Update(GameTime gameTime)
