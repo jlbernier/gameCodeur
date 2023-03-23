@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Atelier3DIso/Atelier3DIso/Content/../../../../../../codes gamecodeur/_images Atelier 3DIso/dirt2D.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Atelier3DIso/Atelier3DIso/Content/../../../../../../codes gamecodeur/_images Atelier 3DIso/dirt3D.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Atelier3DIso/Atelier3DIso/Content/../../../../../../codes gamecodeur/_images Atelier 3DIso/stone2D.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Atelier3DIso/Atelier3DIso/Content/../../../../../../codes gamecodeur/_images Atelier 3DIso/stone3D.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File>dirt2D.png</File>
+    <File>dirt3D.png</File>
+    <File>stone2D.png</File>
+    <File>stone3D.png</File>
+  </DestFiles>
+</SourceFileCollection>
