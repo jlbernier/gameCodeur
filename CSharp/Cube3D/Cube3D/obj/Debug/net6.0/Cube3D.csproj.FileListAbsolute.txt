@@ -39,3 +39,9 @@ C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\bin\Debug\n
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\bin\Debug\net6.0\NAudio.Wasapi.dll
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\bin\Debug\net6.0\NAudio.WinMM.dll
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\bin\Debug\net6.0\Content\pixelfont.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\bin\Debug\net6.0\Content\tile_0.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\bin\Debug\net6.0\Content\tile_1.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\bin\Debug\net6.0\Content\tile_2.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\bin\Debug\net6.0\Content\tile_3.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\bin\Debug\net6.0\Content\tile_4.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\Cube3D\Cube3D\obj\Debug\net6.0\Cube3D.csproj.ResolveComReference.cache

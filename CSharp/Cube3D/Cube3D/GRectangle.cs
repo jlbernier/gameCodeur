@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cube3D
+namespace MapTools
 {
     public class GCRectangle : IDisposable
     {

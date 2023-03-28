@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "l65N9HoyEdKHcRhKetpxlWQ0EGhHQu+tdnJkxHJzYA26k5N/DhpHddwJCFH2xcoUTh6i0L6WRbbgCqrm0ec4QA==",
+  "dgSpecHash": "anWsN1cIYtvev1TBZe6wDUljBYEjBdCGaAr3V+OSV9v3dgKlVLL97yLbVh1p2NEmuLIEk4JBxPBAx6BthqdLuA==",
   "success": true,
   "projectFilePath": "C:\\Users\\33677\\Documents\\projets\\git\\gameCodeur\\CSharp\\Cube3D\\Cube3D\\Cube3D.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\33677\\.nuget\\packages\\naudio.core\\2.1.0\\naudio.core.2.1.0.nupkg.sha512",
     "C:\\Users\\33677\\.nuget\\packages\\naudio.midi\\2.1.0\\naudio.midi.2.1.0.nupkg.sha512",
     "C:\\Users\\33677\\.nuget\\packages\\naudio.wasapi\\2.1.0\\naudio.wasapi.2.1.0.nupkg.sha512",
+    "C:\\Users\\33677\\.nuget\\packages\\naudio.winforms\\2.1.0\\naudio.winforms.2.1.0.nupkg.sha512",
     "C:\\Users\\33677\\.nuget\\packages\\naudio.winmm\\2.1.0\\naudio.winmm.2.1.0.nupkg.sha512",
     "C:\\Users\\33677\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\33677\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"

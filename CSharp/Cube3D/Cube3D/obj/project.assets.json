@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net6.0-windows7.0": {
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -98,15 +98,16 @@
           "NAudio.Core": "2.1.0",
           "NAudio.Midi": "2.1.0",
           "NAudio.Wasapi": "2.1.0",
+          "NAudio.WinForms": "2.1.0",
           "NAudio.WinMM": "2.1.0"
         },
         "compile": {
-          "lib/net6.0/NAudio.dll": {
+          "lib/net6.0-windows7.0/NAudio.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/NAudio.dll": {
+          "lib/net6.0-windows7.0/NAudio.dll": {
             "related": ".xml"
           }
         }
@@ -156,6 +157,21 @@
         "runtime": {
           "lib/netstandard2.0/NAudio.Wasapi.dll": {}
         }
+      },
+      "NAudio.WinForms/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.WinMM": "2.1.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       },
       "NAudio.WinMM/2.1.0": {
         "type": "package",
@@ -394,6 +410,20 @@
         "naudio.wasapi.nuspec"
       ]
     },
+    "NAudio.WinForms/2.1.0": {
+      "sha512": "yoGCLidMVQmg66dNuEYusY1bttZJ5gxvufxRYFgxIw444dw4C70YsDgLeDugPd0rdwkSCQq5CtrVw6DSmxTxPA==",
+      "type": "package",
+      "path": "naudio.winforms/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/NAudio.WinForms.dll",
+        "lib/netcoreapp3.1/NAudio.WinForms.dll",
+        "naudio-icon.png",
+        "naudio.winforms.2.1.0.nupkg.sha512",
+        "naudio.winforms.nuspec"
+      ]
+    },
     "NAudio.WinMM/2.1.0": {
       "sha512": "lUU5C+XNzKhFUIEafA/nJpbtjksFtbUd033fs27KeHlOM0r6rQFF3l75dqxg+rWkGu81MfkBbYrNpH9p8qmtBA==",
       "type": "package",
@@ -509,7 +539,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net6.0-windows7.0": [
       "MonoGame.Content.Builder.Task >= 3.8.1.303",
       "MonoGame.Framework.DesktopGL >= 3.8.1.303",
       "NAudio >= 2.1.0"
@@ -537,7 +567,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -545,8 +575,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "projectReferences": {}
         }
       },
@@ -557,8 +587,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
         "dependencies": {
           "MonoGame.Content.Builder.Task": {
             "target": "Package",

@@ -1,10 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System;
-using System.Diagnostics;
-using NAudio;
-using NAudio.Wave;
+using MapTools;
+using System.Windows.Forms;
+using System.Text.Json;
+
 
 namespace Cube3D
 {
@@ -30,7 +30,10 @@ namespace Cube3D
         private Matrix projection;
 
         private float camDirection = 0;
-        MouseState originalMouseState;
+        private MouseState originalMouseState;
+        private SaveFileDialog saveFileDialog;
+
+
         int[,] mapData = new int[,]
         {
             { 1,1,1,1,1,1,1,1,1,1 },
@@ -128,6 +131,11 @@ namespace Cube3D
                 FogStart = 2,
                 FogEnd = 20
             };
+            for (int i = 0; i <5; i++)
+            {
+                mapEditor.AddTile(i, Content.Load<Texture2D>("tile_" + i));
+            }
+            mapEditor.UpdateGrid();
         }
 
         /// <summary>
@@ -237,12 +245,23 @@ namespace Cube3D
             {
                 mapEditor.Active();
                 IsMouseVisible = mapEditor.isActive;
+                CenterMouse();
+            }
+
+            if (newKBState.IsKeyDown(Keys.S) && !oldKBState.IsKeyDown(Keys.S))
+            {
+                
+            }
+
+            if (newKBState.IsKeyDown(Keys.O) && !oldKBState.IsKeyDown(Keys.O))
+            {
+
             }
             if (!mapEditor.isActive)
             {
                 UpdateGameplay(gameTime);
             }
-  
+            mapEditor.Update();
             oldKBState = newKBState;
 
             base.Update(gameTime);
