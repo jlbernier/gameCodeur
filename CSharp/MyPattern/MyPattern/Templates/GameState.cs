@@ -11,6 +11,7 @@ namespace Templates
     {
         public enum SceneType
         {
+            Map,
             Menu,
             GamePlay,
             GameOver
@@ -30,9 +31,12 @@ namespace Templates
             }
             switch (psceneType)
             {
+                case SceneType.Map:
+                    CurrentScene = new SceneMap(mainGame);
+                    break;
                 case SceneType.Menu:
                     CurrentScene = new SceneMenu(mainGame);
-                    break; 
+                    break;
                 case SceneType.GamePlay:
                     CurrentScene = new SceneGamePlay(mainGame);
                     break; 

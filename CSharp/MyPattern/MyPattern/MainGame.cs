@@ -21,7 +21,13 @@ namespace MyPattern
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            gameState.ChangeScene(GameState.SceneType.Menu);
+            //1920 x 1080
+            _graphics.PreferredBackBufferWidth = 1920;
+            _graphics.PreferredBackBufferHeight = 1080;
+            _graphics.IsFullScreen = false; // pour le devellopement
+            
+            _graphics.ApplyChanges();
+            gameState.ChangeScene(GameState.SceneType.Map);
             base.Initialize();
         }
 

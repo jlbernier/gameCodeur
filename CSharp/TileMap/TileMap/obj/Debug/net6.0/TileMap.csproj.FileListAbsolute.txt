@@ -25,3 +25,5 @@ C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\obj\Debug
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\obj\Debug\net6.0\TileMap.genruntimeconfig.cache
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\obj\Debug\net6.0\ref\TileMap.dll
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\myMapTile.tmx
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\TX Tileset Grass.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\TX Tileset Grass.tsx

@@ -1,1 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/FontM6.spritefont","C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/bin/DesktopGL/FontM6.xnb","FontDescriptionProcessor","SpriteFontContent",2009,578845,7,9038157
+"C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/tileset.png","C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/bin/DesktopGL/tileset.xnb","TextureProcessor","Texture2DContent",1760,16469,0,0677097
+"C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/TX Tileset Grass.png","C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content/bin/DesktopGL/TX Tileset Grass.xnb","TextureProcessor","Texture2DContent",11016,262229,0,0126588

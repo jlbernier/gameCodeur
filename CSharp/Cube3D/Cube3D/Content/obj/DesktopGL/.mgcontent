@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Cube3D/Cube3D/Content/Anim_char7_idle_01.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Cube3D/Cube3D/Content/Anim_char7_idle_02.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Cube3D/Cube3D/Content/Anim_char7_idle_03.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Cube3D/Cube3D/Content/Anim_char7_idle_04.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Cube3D/Cube3D/Content/Anim_char7_idle_05.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Cube3D/Cube3D/Content/Anim_char7_idle_06.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Cube3D/Cube3D/Content/cube.fbx</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Cube3D/Cube3D/Content/pixelfont.spritefont</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/Cube3D/Cube3D/Content/wall.jpg</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

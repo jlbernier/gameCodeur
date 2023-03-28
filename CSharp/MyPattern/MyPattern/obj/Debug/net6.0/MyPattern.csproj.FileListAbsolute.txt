@@ -32,3 +32,12 @@ C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\D
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\ship.xnb
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\techno.ogg
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\techno.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\FontM6.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\tileset.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\TX Tileset Grass.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\tileset.png
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\TX Tileset Grass.png
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\TX Tileset Grass.tsx
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\tileset.tsx
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\MyfirstMap.tmx
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\MyPattern\MyPattern\bin\Debug\net6.0\Content\MyMap.tmx

@@ -16,7 +16,7 @@ namespace Templates
         public static Song MusicGamePlay { get; private set; }
         public static void Load(ContentManager pContentManager)
         {
-            MainFont = pContentManager.Load<SpriteFont>("mainfont");
+            MainFont = pContentManager.Load<SpriteFont>("FontM6");
             MusicGamePlay = pContentManager.Load<Song>("techno");
 
         }

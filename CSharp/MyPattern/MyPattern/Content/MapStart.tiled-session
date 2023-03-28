@@ -1,0 +1,87 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "MyMap.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/TileMap/TileMap/Content/TX Tileset Grass.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/TileMap/TileMap/Content/myMapTile.tmx": {
+            "scale": 1.8821875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 160.18595384359955,
+                "y": 160.18595384359955
+            }
+        },
+        "C:/Users/33677/Documents/projets/sans titre.tmx": {
+            "scale": 0.510625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 476.8665850673195,
+                "y": 316.2790697674419
+            }
+        },
+        "C:/Users/33677/Documents/projets/tileSheetMap.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/33677/Documents/projets/tileset.tsx": {
+            "scaleInDock": 1
+        },
+        "MyMap.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 945,
+                "y": 519.6666666666666
+            }
+        },
+        "MyfirstMap.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 4669,
+                "y": 10645
+            }
+        },
+        "TX Tileset Grass.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/MyPattern/MyPattern/Content",
+    "map.height": 67,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 120,
+    "openFiles": [
+        "MyfirstMap.tmx",
+        "TX Tileset Grass.tsx",
+        "tileset.tsx",
+        "MyMap.tmx"
+    ],
+    "project": "MapStart.tiled-project",
+    "recentFiles": [
+        "MyfirstMap.tmx",
+        "TX Tileset Grass.tsx",
+        "tileset.tsx",
+        "MyMap.tmx",
+        "C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/TileMap/TileMap/Content/myMapTile.tmx",
+        "C:/Users/33677/Documents/projets/sans titre.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

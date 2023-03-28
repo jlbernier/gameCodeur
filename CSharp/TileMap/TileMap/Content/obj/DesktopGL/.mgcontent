@@ -5,8 +5,10 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/TileMap/TileMap/Content/tileset.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/TileMap/TileMap/Content/TX Tileset Grass.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
