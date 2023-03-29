@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/cube.fbx</SourceFile>
+  <SourceTime>2017-11-17T09:27:56+07:00</SourceTime>
+  <DestFile>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/bin/Windows/Content/cube.xnb</DestFile>
+  <DestTime>2018-07-16T18:52:23.454744+07:00</DestTime>
+  <Importer>FbxImporter</Importer>
+  <ImporterTime>2018-01-21T06:59:38+07:00</ImporterTime>
+  <Processor>ModelProcessor</Processor>
+  <ProcessorTime>2018-01-21T06:59:38+07:00</ProcessorTime>
+  <Parameters>
+    <Key>ColorKeyColor</Key>
+    <Value>0,0,0,0</Value>
+  </Parameters>
+  <Parameters>
+    <Key>ColorKeyEnabled</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>DefaultEffect</Key>
+    <Value>BasicEffect</Value>
+  </Parameters>
+  <Parameters>
+    <Key>GenerateMipmaps</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>GenerateTangentFrames</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>PremultiplyTextureAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>PremultiplyVertexColors</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>ResizeTexturesToPowerOfTwo</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>RotationX</Key>
+    <Value>0</Value>
+  </Parameters>
+  <Parameters>
+    <Key>RotationY</Key>
+    <Value>0</Value>
+  </Parameters>
+  <Parameters>
+    <Key>RotationZ</Key>
+    <Value>0</Value>
+  </Parameters>
+  <Parameters>
+    <Key>Scale</Key>
+    <Value>1</Value>
+  </Parameters>
+  <Parameters>
+    <Key>SwapWindingOrder</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Color</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset>
+    <string>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/bin/Windows/Content/wall_0.xnb</string>
+  </BuildAsset>
+  <BuildOutput />
+</PipelineBuildEvent>

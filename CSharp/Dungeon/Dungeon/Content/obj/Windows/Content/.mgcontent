@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Anim_char7_idle_01.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Anim_char7_idle_02.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Anim_char7_idle_03.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Anim_char7_idle_04.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Anim_char7_idle_05.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Anim_char7_idle_06.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/CharSheet/body_armor.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/CharSheet/body_boots.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/CharSheet/body_gloves.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/CharSheet/body_head.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/CharSheet/SheetOverlay.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/cube.fbx</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/icon_chain_breast.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/icon_leather_chest1.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/icon_plate_breast.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/2HHammer_normal.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Arrow.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Axe_Battle.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Book_Tome1.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Bootc_Cloth.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/BorderTemplate.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/BorderTemplateE.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Cheese.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Chest_Cloth_Luxury.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Chest_Cloth_Torn.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Coins_Big.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Dagger.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Head_Plate.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Head_Plate_Upgraded.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Major_Potion_mana.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Minor_Potion_health.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Shield_Steel2.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/Icons/Sword_enhanched.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/InventoryBG.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/mainfont.spritefont</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/particle.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/sounds/equip_armor.wav</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/sounds/equip_cloth.wav</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/sounds/equip_weapon.wav</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/sounds/inventory_slot.wav</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/tile_0.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/tile_1.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/tile_2.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/tile_3.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/tile_4.png</File>
+    <File>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/wall.jpg</File>
+  </SourceFiles>
+</SourceFileCollection>

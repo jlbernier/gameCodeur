@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Anim_char7_idle_01.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Anim_char7_idle_02.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Anim_char7_idle_03.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Anim_char7_idle_04.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Anim_char7_idle_05.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Anim_char7_idle_06.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/CharSheet/body_armor.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/CharSheet/body_boots.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/CharSheet/body_gloves.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/CharSheet/body_head.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/CharSheet/SheetOverlay.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/cube.fbx</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/icon_chain_breast.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/icon_leather_chest1.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/icon_plate_breast.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/2HHammer_normal.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Arrow.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Axe_Battle.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Book_Tome1.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Bootc_Cloth.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/BorderTemplate.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/BorderTemplateE.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Cheese.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Chest_Cloth_Luxury.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Chest_Cloth_Torn.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Coins_Big.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Dagger.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Head_Plate.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Head_Plate_Upgraded.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Major_Potion_mana.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Minor_Potion_health.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Shield_Steel2.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/Icons/Sword_enhanched.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/InventoryBG.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/particle.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/pixelfont.spritefont</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/sounds/equip_armor.wav</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/sounds/equip_cloth.wav</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/sounds/equip_weapon.wav</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/sounds/inventory_slot.wav</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/tile_0.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/tile_1.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/tile_2.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/tile_3.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/tile_4.png</File>
+    <File>C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/DungeonInventory/DungeonInventory/Content/wall.jpg</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

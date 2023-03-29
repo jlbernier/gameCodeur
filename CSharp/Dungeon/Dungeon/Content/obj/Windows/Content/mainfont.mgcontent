@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/mainfont.spritefont</SourceFile>
+  <SourceTime>2018-07-13T12:15:30+07:00</SourceTime>
+  <DestFile>C:/Users/dmeke/Dropbox/Cours création de jeux vidéo/_Sources Ateliers PREMIUM/Monogame/Atelier Inventaire/Inventaire - Projet de travail - Copie/Dungeon/Content/bin/Windows/Content/mainfont.xnb</DestFile>
+  <DestTime>2018-07-16T18:52:36.6205126+07:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2018-01-21T06:59:38+07:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2018-01-21T06:59:38+07:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

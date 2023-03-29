@@ -13,8 +13,7 @@ namespace Templates
     {
         //IActor
         public Vector2 Position { get; set; }
-
-        public Rectangle BoundingBox { get; set;  }
+        public Rectangle BoundingBox { get; set; }
         public float velovityX;
         public float velovityY;
         //Sprite
@@ -42,18 +41,12 @@ namespace Templates
             BoundingBox = new Rectangle(
                 (int)Position.X,
                 (int)Position.Y,
-                //(int) 0,
-                //(int) 0,
                 Texture.Width,
                 Texture.Height);
-               // Debug.WriteLine("Rectangle: "+ Position.X + ", " + Position.Y + ", " + Texture.Width + ", " + Texture.Height);
         }
         public virtual void Draw(SpriteBatch pSpriteBatch)
         {
-            //Debug.WriteLine("Rectangle: " + BoundingBox.X + ", " + BoundingBox.Y + ", " + Texture.Width + ", " + Texture.Height);
-
-            //pSpriteBatch.Draw(Texture, Position, BoundingBox, Color.White);
             pSpriteBatch.Draw(Texture, Position, null, Color.White);
-         }
+        }
     }
 }

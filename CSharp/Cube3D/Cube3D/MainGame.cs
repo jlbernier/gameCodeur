@@ -58,6 +58,7 @@ namespace Cube3D
 
         private KeyboardState oldKBState;
         private MapEditor mapEditor;
+        private JSONTools jsonTools;
 
         private void CenterMouse()
         {
@@ -315,6 +316,7 @@ namespace Cube3D
                     if (result == DialogResult.OK)
                     {
                         Debug.WriteLine("File Name: " + openFileDialog.FileName);
+                        //jsonTools.ReadJSON(ref mapData, openFileDialog.FileName);
                         MapJSON json;
                         MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(File.ReadAllText(openFileDialog.FileName)));
                         DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(MapJSON));
