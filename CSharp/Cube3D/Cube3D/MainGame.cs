@@ -4,7 +4,14 @@ using Microsoft.Xna.Framework.Input;
 using MapTools;
 using System.Windows.Forms;
 using System.Text.Json;
-
+using xi = Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
+using System;
+using System.Threading.Tasks;
+using System.Threading;
+using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Text;
 
 namespace Cube3D
 {
@@ -32,6 +39,7 @@ namespace Cube3D
         private float camDirection = 0;
         private MouseState originalMouseState;
         private SaveFileDialog saveFileDialog;
+        private OpenFileDialog openFileDialog;
 
 
         int[,] mapData = new int[,]
@@ -154,7 +162,7 @@ namespace Cube3D
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected void UpdateGameplay(GameTime gameTime)
         {
-            bool shift = Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift);
+            bool shift = Keyboard.GetState().IsKeyDown(xi.Keys.LeftShift) || Keyboard.GetState().IsKeyDown(xi.Keys.RightShift);
 
             // TODO: Add your update logic here
 
@@ -167,17 +175,17 @@ namespace Cube3D
             }
 
             // Rotate Camera with keyboard
-            if (Keyboard.GetState().IsKeyDown(Keys.Q) && shift)  // left
+            if (Keyboard.GetState().IsKeyDown(xi.Keys.Q) && shift)  // left
             {
                 camDirection += .01f;
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.D) && shift)  // right
+            if (Keyboard.GetState().IsKeyDown(xi.Keys.D) && shift)  // right
             {
                 camDirection -= .01f;
             }
 
             // Rotate Camera with keyboard
-            if (Keyboard.GetState().IsKeyDown(Keys.Q) && !shift)  // left
+            if (Keyboard.GetState().IsKeyDown(xi.Keys.Q) && !shift)  // left
             {
                 Matrix forwardMovement = Matrix.CreateRotationY(camDirection);
                 float speed = .1f;
@@ -186,7 +194,7 @@ namespace Cube3D
                 cameraPosition.Z += v.Z;
                 cameraPosition.X += v.X;
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.D) && !shift)  // right
+            if (Keyboard.GetState().IsKeyDown(xi.Keys.D) && !shift)  // right
             {
                 Matrix forwardMovement = Matrix.CreateRotationY(camDirection);
                 float speed = .1f;
@@ -195,7 +203,7 @@ namespace Cube3D
                 cameraPosition.Z += v.Z;
                 cameraPosition.X += v.X;
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.Z))  // forward
+            if (Keyboard.GetState().IsKeyDown(xi.Keys.Z))  // forward
             {
                 Matrix forwardMovement = Matrix.CreateRotationY(camDirection);
                 float speed = .1f;
@@ -204,7 +212,7 @@ namespace Cube3D
                 cameraPosition.Z += v.Z;
                 cameraPosition.X += v.X;
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.S))  // backward
+            if (Keyboard.GetState().IsKeyDown(  xi.Keys.S))  // backward
             {
                 Matrix forwardMovement = Matrix.CreateRotationY(camDirection);
                 float speed = .1f;
@@ -215,11 +223,11 @@ namespace Cube3D
             }
 
             // Move camera up & down
-            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            if (Keyboard.GetState().IsKeyDown(xi.Keys.Up))
             {
                 cameraPosition += new Vector3(0, .05f, 0);
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.Down))
+            if (Keyboard.GetState().IsKeyDown(xi.Keys.Down))
             {
                 cameraPosition += new Vector3(0, -.05f, 0);
             }
@@ -237,25 +245,88 @@ namespace Cube3D
         }
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back ==  xi.ButtonState.Pressed || Keyboard.GetState().IsKeyDown(xi.Keys.Escape))
                 Exit();
 
             KeyboardState newKBState = Keyboard.GetState();
-            if (newKBState.IsKeyDown(Keys.Tab) && !oldKBState.IsKeyDown(Keys.Tab))
+            if (newKBState.IsKeyDown(xi.Keys.Tab) && !oldKBState.IsKeyDown(xi.Keys.Tab))
             {
                 mapEditor.Active();
                 IsMouseVisible = mapEditor.isActive;
                 CenterMouse();
             }
 
-            if (newKBState.IsKeyDown(Keys.S) && !oldKBState.IsKeyDown(Keys.S))
+            if (newKBState.IsKeyDown(xi.Keys.S) && !oldKBState.IsKeyDown(xi.Keys.S))
             {
+                string selectedPath = "";
+
+                Thread t = new Thread((ThreadStart)(() =>
+                {
+                    saveFileDialog = new SaveFileDialog(); //
+                    saveFileDialog.InitialDirectory = "C:\\Users\\33677\\Documents\\projets\\git\\gameCodeur\\CSharp\\Cube3D\\Cube3D\\Content";
+                    saveFileDialog.AddExtension = true;
+                    saveFileDialog.DefaultExt = ".map";
+                    saveFileDialog.Filter = "Map Editor JSON (*.map)|*.map";
+                    //saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                    saveFileDialog.FilterIndex = 2;
+
+                    DialogResult result = saveFileDialog.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        Debug.WriteLine("File Name: " + saveFileDialog.FileName);
+                        MapJSON json = new MapJSON();
+                        json.ConvertForWrite(mapData);
+                        MemoryStream stream = new MemoryStream();
+                        DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(MapJSON));
+                        ser.WriteObject(stream, json);
+                        stream.Position = 0;
+                        StreamReader sr = new StreamReader(stream);
+                        string strmap = sr.ReadToEnd();
+                        Debug.WriteLine(strmap);
+                        File.WriteAllText(saveFileDialog.FileName, strmap);
+                        //sr.Close();
+
+                    }
+                }));
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                t.Join();
                 
+                // e.g C:\Users\MyName\Desktop\myfile.json
+                Console.WriteLine(selectedPath);
+                           
             }
 
-            if (newKBState.IsKeyDown(Keys.O) && !oldKBState.IsKeyDown(Keys.O))
+            if (newKBState.IsKeyDown(xi.Keys.O) && !oldKBState.IsKeyDown(xi.Keys.O))
             {
+                string selectedOpenPath = "";
+                Debug.WriteLine("File Open !!!!!!! ");
+                Thread t = new Thread((ThreadStart)(() =>
+                {
+                    openFileDialog = new OpenFileDialog(); //
+                    openFileDialog.InitialDirectory = "C:\\Users\\33677\\Documents\\projets\\git\\gameCodeur\\CSharp\\Cube3D\\Cube3D\\Content";
+                    openFileDialog.AddExtension = true;
+                    openFileDialog.DefaultExt = ".map";
+                    openFileDialog.Filter = "Map Editor JSON (*.map)|*.map";
+                    //saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                    openFileDialog.FilterIndex = 2;
 
+                    DialogResult result = openFileDialog.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        Debug.WriteLine("File Name: " + openFileDialog.FileName);
+                        MapJSON json;
+                        MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(File.ReadAllText(openFileDialog.FileName)));
+                        DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(MapJSON));
+                        json = (MapJSON) ser.ReadObject(stream);
+                        json.ConvertForRead(ref mapData);
+                        mapEditor.UpdateGrid();
+                        CenterMouse();  
+                    }
+                }));
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                t.Join();
             }
             if (!mapEditor.isActive)
             {
