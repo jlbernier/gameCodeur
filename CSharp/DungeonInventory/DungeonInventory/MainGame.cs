@@ -61,6 +61,7 @@ namespace DungeonInventory
         private SaveFileDialog saveFileDialog;
 
         private OverlayInventory inventoryDisplay;
+        private InventoryManager inventoryManager;
 
         private void CenterMouse()
         {
@@ -117,7 +118,14 @@ namespace DungeonInventory
             originalMouseState = Mouse.GetState();
 
             mapEditor = new OverlayMapEditor(this, 5, ref mapData);
-            inventoryDisplay = new OverlayInventory(this, new Vector2(441, 84));
+
+            inventoryManager = new InventoryManager();
+            ItemData.PopulateData();
+
+
+            inventoryDisplay = new OverlayInventory(this, inventoryManager, 441, 84);
+   
+
             base.Initialize();
         }
 
@@ -155,6 +163,16 @@ namespace DungeonInventory
                 mapEditor.AddTile(i, Content.Load<Texture2D>("tile_" + i));
             }
             mapEditor.UpdateGrid();
+
+            ItemTextures.PopulateTextures(this);
+            inventoryManager.AddObject("HAMMER", 1);
+            inventoryManager.AddObject("DAGGER", 1);
+            inventoryManager.AddObject("SHIELDSTEEL", 1);
+            inventoryManager.AddObject("HELMETPLATEU", 1);
+            inventoryManager.AddObject("ARROW", 5);
+            inventoryManager.AddObject("ARROW", 3);
+            inventoryManager.AddObject("ARROW", 7);
+            inventoryDisplay.Populate();
         }
 
         /// <summary>

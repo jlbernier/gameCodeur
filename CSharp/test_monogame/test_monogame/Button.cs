@@ -19,13 +19,10 @@ namespace test_monogame
         private MouseState oldMouseState;
         public OnClick onClick { get; set; }
         public Texture2D Texture { get; }
-        public bool ToRemove { get; set; }
-
 
         public Button(Texture2D pTexture, int x, int y)
         {
             Texture = pTexture;
-            ToRemove = false;
             Position = new Vector2(x, y);
         }
 
@@ -69,7 +66,7 @@ namespace test_monogame
               Texture.Width,
               Texture.Height);
         }
-        public virtual void Draw(SpriteBatch pSpriteBatch)
+        public virtual void Draw(GameTime pGameTime, SpriteBatch pSpriteBatch)
         {
             pSpriteBatch.Draw(Texture, Position, null, Color.White);
         }

@@ -35,8 +35,10 @@ namespace TileMap
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 1920;
+            graphics.PreferredBackBufferHeight = 1080;
+            graphics.ApplyChanges();
             IsMouseVisible = true;
-            
         }
 
         protected override void Initialize()
@@ -53,6 +55,7 @@ namespace TileMap
             // TODO: use this.Content to load your game content here
             map = new TmxMap("Content/myMapTile.tmx");
             tileset = Content.Load<Texture2D>(map.Tilesets[0].Name.ToString());
+          //  tilesetGrass = Content.Load<Texture2D>("TX Tileset Grass");
             tilesetGrass = Content.Load<Texture2D>(map.Tilesets[1].Name.ToString());
             tileWidth = map.Tilesets[0].TileWidth;
             tileHeight = map.Tilesets[0].TileHeight;
@@ -67,6 +70,7 @@ namespace TileMap
             mapHeight = map.Height;
             tilesetColumnsGrass = tilesetGrass.Width / tileWidthGrass;
             tilesetLinesGrass = tilesetGrass.Height / tileHeightGrass;
+            
             // Code pour 1 ou 2 tilsets à modifier pour plus de tilsets
             for (int nLayer = 0; nLayer < map.Layers.Count; nLayer++)
             {
@@ -143,7 +147,7 @@ namespace TileMap
                             spriteBatch.Draw(
                             tilesetGrass,
                             new Vector2(xGrass, yGrass),
-                            tilesetRecGrass, Color.White);
+                            tilesetRecGrass, Color.White,0f,new Vector2(0,0),2f, SpriteEffects.None,0f);
                         }
                     }
                     column++;

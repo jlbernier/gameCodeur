@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/TileMap/TileMap/Content/TX Tileset Grass.png","C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/TileMap/TileMap/Content/bin/DesktopGL/TX Tileset Grass.xnb","TextureProcessor","Texture2DContent",11016,262229,0,2187989
+"C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/TileMap/TileMap/Content/Animated water tiles.png","C:/Users/33677/Documents/projets/git/gameCodeur/CSharp/TileMap/TileMap/Content/bin/DesktopGL/Animated water tiles.xnb","TextureProcessor","Texture2DContent",38753,8028245,0,305693

@@ -27,3 +27,7 @@ C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\obj\Debug
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\myMapTile.tmx
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\TX Tileset Grass.xnb
 C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\TX Tileset Grass.tsx
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\Grass Tileset.xnb
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\Grass Tileset.tsx
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\Animated water tiles.tsx
+C:\Users\33677\Documents\projets\git\gameCodeur\CSharp\TileMap\TileMap\bin\Debug\net6.0\Content\Animated water tiles.xnb

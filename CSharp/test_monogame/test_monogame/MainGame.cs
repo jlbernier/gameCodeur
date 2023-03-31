@@ -9,18 +9,19 @@ namespace test_monogame
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Button MyButton;
-
+        private Tools tools;
         public MainGame()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+            tools = new Tools(this);
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            
+            tools.Init();
             base.Initialize();
         }
 
@@ -48,7 +49,7 @@ namespace test_monogame
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
-            MyButton.Draw(_spriteBatch);
+            MyButton.Draw(gameTime, _spriteBatch);
             _spriteBatch.End();
 
             base.Draw(gameTime);
