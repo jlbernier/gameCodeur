@@ -1,4 +1,4 @@
-﻿using MapTools;
+﻿using GameCodeur;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DungeonInventory
+namespace Dungeon
 {
     class Tile
     {

@@ -1,81 +1,89 @@
-﻿using DungeonInventory;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
-namespace DungeonInventory
+namespace Dungeon
 {
     public class OverlayInventory : Overlay
     {
-        private InventoryManager inventoryManager;
+        public delegate void onItemDrop(Item pItem);
+
+        InventoryManager inventoryManager;
+
+        public onItemDrop DropDelegate;
+
         private Vector2 Position;
 
-        private Texture2D textureBG;
+        private MouseState oldMouseState;
+        Vector2 mouseStart;
+
         private Texture2D textureCadre;
         private Texture2D textureCadreEnlight;
-
+        private Texture2D textureBG;
         private List<InventoryIcon> lstIcons;
         private List<Rectangle> lstSlots;
+        private InventoryIcon dragIcon;
         private int slotEnlight;
         private int slotFrom;
 
-        public const int COLS = 7;
-        public const int LINES = 7;
+        private SoundEffect sndSlot;
 
-        private MouseState oldMouseState;
-        private Vector2 mouseStart;
-        InventoryIcon dragIcon;
+        private const int LINES = 7;
+        private const int COLS = 7;
+        private const int WIDTHICON = 43;
+        private const int HEIGHTICON = 43;
 
-        public const int WIDTHICON = 43;
-        public const int HEIGHTICON = 43;
-
-        public OverlayInventory(Game pGame, InventoryManager pInventory, int pX, int pY) : base(pGame)
+        public OverlayInventory(Game pGame, ref InventoryManager pInventoryManager, int pX, int pY) : base(pGame)
         {
-            inventoryManager = pInventory;
             Position = new Vector2(pX, pY);
+            dragIcon = null;
 
-            textureBG = pGame.Content.Load<Texture2D>("InventoryBG");
+            inventoryManager = pInventoryManager;
+
             textureCadre = pGame.Content.Load<Texture2D>("Icons/BorderTemplate");
             textureCadreEnlight = pGame.Content.Load<Texture2D>("Icons/BorderTemplateE");
+            textureBG = pGame.Content.Load<Texture2D>("InventoryBG");
+
+            sndSlot = pGame.Content.Load<SoundEffect>("sounds/inventory_slot");
 
             lstIcons = new List<InventoryIcon>();
             lstSlots = new List<Rectangle>();
         }
 
-        public void Populate()
+        public void PopulateIcons()
         {
             lstIcons.Clear();
             lstSlots.Clear();
-            float x = Position.X + 11f;
-            float y = Position.Y + 12f;
             slotEnlight = -1;
             slotFrom = -1;
+            float x = Position.X + 11f;
+            float y = Position.Y + 12f;
             int col = 1;
             int line = 1;
             int slot = 0;
-            for (int i = 0; i < InventoryManager.MAXITEM; i++)
+            for (int i = 0; i < InventoryManager.MAXITEMS; i++)
             {
-                float xIcon, yIcon;
-                xIcon = x + (col - 1) * (textureCadre.Width + 1);
-                yIcon = y + (line - 1) * (textureCadre.Height + 1);
-                lstSlots.Add(new Rectangle((int)xIcon, (int)yIcon, WIDTHICON, HEIGHTICON));
-
-                xIcon++;
-                yIcon++;
-
+                float xItem, yItem;
+                xItem = x + (col - 1) * (textureCadre.Width + 1);
+                yItem = y + (line - 1) * (textureCadre.Height + 1);
+                lstSlots.Add(new Rectangle((int)xItem, (int)yItem, WIDTHICON, HEIGHTICON));
+                xItem++;
+                yItem++;
+                // Icon
                 Item item = inventoryManager.GetItemAt(slot);
                 if (item != null)
                 {
                     Texture2D texture = ItemTextures.Textures[item.ID];
-                    InventoryIcon icon = new InventoryIcon(texture, new Vector2(xIcon, yIcon), item.Quantity, true);
+                    InventoryIcon icon = new InventoryIcon(texture, new Vector2(xItem, yItem), item.Quantity, true);
                     lstIcons.Add(icon);
                 }
-
+                // Next!
                 slot++;
                 col++;
                 if (col > COLS)
@@ -96,12 +104,13 @@ namespace DungeonInventory
 
             if (newMouseState.LeftButton == ButtonState.Pressed && oldMouseState.LeftButton == ButtonState.Released)
             {
+                // Which item is clicked?
                 foreach (InventoryIcon icon in lstIcons)
                 {
                     if (icon.HandleRect.Contains(newMouseState.Position) && icon.isDraggable)
                     {
-                        icon.isDragging = true;
                         dragIcon = icon;
+                        icon.isDragging = true;
                         break;
                     }
                 }
@@ -114,9 +123,9 @@ namespace DungeonInventory
                             slotFrom = i;
                         }
                     }
-                    mouseStart = newMouseState.Position.ToVector2();
-                    dragIcon.Touch(new DragEvent
-                    {
+                    mouseStart = new Vector2(newMouseState.X, newMouseState.Y);
+                    // CLIC!
+                    dragIcon.Touch(new DragEvent {
                         phase = EPhase.began,
                         startX = mouseStart.X,
                         startY = mouseStart.Y,
@@ -127,6 +136,7 @@ namespace DungeonInventory
             }
             else if (newMouseState.LeftButton == ButtonState.Pressed && oldMouseState.LeftButton == ButtonState.Pressed && dragIcon != null)
             {
+                // MOVE
                 dragIcon.Touch(new DragEvent
                 {
                     phase = EPhase.move,
@@ -135,9 +145,9 @@ namespace DungeonInventory
                     X = newMouseState.X,
                     Y = newMouseState.Y
                 });
-                for (int i = 0; i < COLS * LINES; i++)
+                for (int i = 0; i < COLS*LINES; i++)
                 {
-                    if (lstSlots[i].Contains(dragIcon.GetCenter()))
+                    if (lstSlots[i].Contains(dragIcon.Position + new Vector2(dragIcon.Texture.Width/2, dragIcon.Texture.Height/2)))
                     {
                         slotEnlight = i;
                     }
@@ -146,11 +156,13 @@ namespace DungeonInventory
             else if (newMouseState.LeftButton == ButtonState.Released && oldMouseState.LeftButton == ButtonState.Pressed && dragIcon != null)
             {
                 slotEnlight = -1;
+                // From where to where?
                 int slotTo = -1;
                 for (int i = 0; i < COLS * LINES; i++)
                 {
                     if (lstSlots[i].Contains(dragIcon.GetCenter()))
                     {
+                        sndSlot.Play();
                         slotTo = i;
                         dragIcon.Touch(new DragEvent
                         {
@@ -165,7 +177,7 @@ namespace DungeonInventory
                 // Deal!
                 Item itFrom = inventoryManager.GetItemAt(slotFrom);
                 Item itTo = inventoryManager.GetItemAt(slotTo);
-                if (itFrom != null && slotTo != -1 && (slotTo != slotFrom))
+                if (itFrom != null && slotTo != -1 && (slotFrom != slotTo))
                 {
                     if (itTo != null)
                     {
@@ -189,53 +201,58 @@ namespace DungeonInventory
                             itFrom.InventorySlot = slotTo;
                         }
                     }
-                    else
+                    else// if (itFrom.Quantity > 0)
                     {
                         itFrom.InventorySlot = slotTo;
                     }
                     if (itFrom.Quantity == 0)
                     {
-                        inventoryManager.RemoteItem(slotFrom);
+                        inventoryManager.RemoveItem(slotFrom);
                     }
+                    PopulateIcons();
                 }
-                dragIcon.Touch(new DragEvent
+                else
                 {
-                    phase = EPhase.cancelled,
-                    startX = mouseStart.X,
-                    startY = mouseStart.Y,
-                    X = newMouseState.X,
-                    Y = newMouseState.Y
-                });
-                Populate();
+                    dragIcon.Touch(new DragEvent
+                    {
+                        phase = EPhase.cancelled,
+                        startX = mouseStart.X,
+                        startY = mouseStart.Y,
+                        X = newMouseState.X,
+                        Y = newMouseState.Y
+                    });
+                    // Delegate!
+                    if (slotTo == -1 && DropDelegate != null)
+                        DropDelegate(itFrom);
+                }
                 dragIcon = null;
             }
-            oldMouseState = newMouseState;
-        }
 
+            oldMouseState = Mouse.GetState();
+        }
+        
         public override void Draw(SpriteBatch pSpriteBatch, SpriteFont pFont)
         {
-            pSpriteBatch.Draw(textureBG, Position, Color.White);
+            if (!isActive) return;
 
             float x = Position.X + 11f;
             float y = Position.Y + 12f;
-
+            pSpriteBatch.Draw(textureBG, Position, Color.White);
             int line = 1;
             int col = 1;
             int slot = 0;
-
-            for (int i = 0; i < (7 * 7); i++)
+            for (int i = 0; i < InventoryManager.MAXITEMS; i++)
             {
                 float xItem, yItem;
                 xItem = x + (col - 1) * (textureCadre.Width + 1);
                 yItem = y + (line - 1) * (textureCadre.Height + 1);
+                // BG
                 if (slot == slotEnlight)
                     pSpriteBatch.Draw(textureCadreEnlight, new Vector2(xItem, yItem), Color.White);
                 else
                     pSpriteBatch.Draw(textureCadre, new Vector2(xItem, yItem), Color.White);
-                //pSpriteBatch.DrawString(pFont, slot.ToString(), new Vector2(xItem, yItem), Color.White);
-
+                // Next slot
                 slot++;
-
                 col++;
                 if (col > COLS)
                 {
@@ -247,13 +264,17 @@ namespace DungeonInventory
                     }
                 }
             }
-
             foreach (InventoryIcon icon in lstIcons)
             {
-                icon.Draw(pSpriteBatch, pFont);
+                if (icon != dragIcon)
+                {
+                    icon.Draw(pSpriteBatch, pFont);
+                }
             }
-
-            base.Draw(pSpriteBatch, pFont);
+            if (dragIcon != null)
+            {
+                dragIcon.Draw(pSpriteBatch, pFont);
+            }
         }
     }
 }

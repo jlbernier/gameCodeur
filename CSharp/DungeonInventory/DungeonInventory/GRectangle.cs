@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MapTools
+namespace Gamecodeur
 {
     public class GCRectangle : IDisposable
     {

@@ -1,16 +1,15 @@
-﻿using DungeonInventory;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DungeonInventory
+namespace Dungeon
 {
     public class InventoryManager
     {
         private List<Item> lstInventory;
-        public const int MAXITEM = 7 * 7;
+        public const int MAXITEMS = 7 * 7;
 
         public InventoryManager()
         {
@@ -27,17 +26,31 @@ namespace DungeonInventory
             return null;
         }
 
+        public void RemoveItem(int pSlot)
+        {
+            foreach (Item item in lstInventory)
+            {
+                if (item.InventorySlot == pSlot)
+                {
+                    lstInventory.Remove(item);
+                    break;
+                }
+            }
+        }
+
         public bool AddObject(string pItemID, int pQuantity)
         {
-            if (lstInventory.Count >= MAXITEM)
+            if (lstInventory.Count >= MAXITEMS)
+            {
                 return false;
-
+            }
             if (ItemData.Data.ContainsKey(pItemID))
             {
                 Item item = new Item(ItemData.Data[pItemID]);
                 item.Quantity = pQuantity;
                 int slot = -1;
-                for (int i = 0; i < MAXITEM; i++)
+                // Which slot?
+                for (int i = 0; i < MAXITEMS; i++)
                 {
                     if (GetItemAt(i) == null)
                     {
@@ -52,20 +65,7 @@ namespace DungeonInventory
                     return true;
                 }
             }
-
             return false;
-        }
-
-        public void RemoteItem(int pSlot)
-        {
-            foreach (Item item in lstInventory)
-            {
-                if (item.InventorySlot == pSlot)
-                {
-                    lstInventory.Remove(item);
-                    break;
-                }
-            }
         }
 
         public List<Item> GetObjectList()

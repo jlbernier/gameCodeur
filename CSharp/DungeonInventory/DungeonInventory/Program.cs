@@ -1,3 +1,3 @@
 ﻿
-using var game = new DungeonInventory.MainGame();
+using var game = new Dungeon.MainGame();
 game.Run();

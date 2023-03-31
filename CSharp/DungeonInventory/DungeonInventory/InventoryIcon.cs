@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DungeonInventory
+namespace Dungeon
 {
     public enum EPhase
     {
@@ -15,6 +15,7 @@ namespace DungeonInventory
         ended,
         cancelled
     }
+
     public class DragEvent
     {
         public float X;
@@ -24,21 +25,23 @@ namespace DungeonInventory
         public EPhase phase;
     }
 
-    public class InventoryIcon
+    class InventoryIcon
     {
         public Vector2 Position;
         public Texture2D Texture;
-        public int Quantity;
         public bool isDraggable;
-        public bool isDragging;
-        private Vector2 StartPosition;
-        public InventoryIcon(Texture2D pTexture, Vector2 pPosition, int pQuantity, bool pbDraggable)
+        private int Quantity;
+
+        public InventoryIcon(Texture2D pTexture, Vector2 pPosition, int pQuantity, bool pDraggable)
         {
             Position = pPosition;
             Texture = pTexture;
+            isDraggable = pDraggable;
             Quantity = pQuantity;
-            isDraggable = pbDraggable;
+
+            isDragging = false;
         }
+
         public Rectangle HandleRect
         {
             get
@@ -46,36 +49,47 @@ namespace DungeonInventory
                 return new Rectangle((int)Position.X, (int)Position.Y, Texture.Width, Texture.Height);
             }
         }
+
+        public bool isDragging;
+
+
         public Vector2 GetCenter()
         {
             return new Vector2(Position.X + Texture.Width / 2, Position.Y + Texture.Height / 2);
         }
 
+        private Vector2 StartPosition;
+
         public void Touch(DragEvent pDragEvent)
         {
-            if (!isDraggable)
-                return;
-
-            if (pDragEvent.phase == EPhase.began)
+            if (isDraggable)
             {
-                isDragging = true;
-                StartPosition = Position;
-            }
-            else if (pDragEvent.phase == EPhase.move)
-            {
-                float x = pDragEvent.X - pDragEvent.startX + StartPosition.X;
-                float y = pDragEvent.Y - pDragEvent.startY + StartPosition.Y;
-                Position = new Vector2(x, y);
-            }
-            else if (pDragEvent.phase == EPhase.ended || pDragEvent.phase == EPhase.cancelled)
-            {
-                isDragging = false;
-                if (pDragEvent.phase == EPhase.cancelled)
+                if (pDragEvent.phase == EPhase.began)
                 {
-                    Position = StartPosition;
+                    StartPosition = Position;
+                    isDragging = true;
+                }
+                else if (pDragEvent.phase == EPhase.move)
+                {
+                    float x = pDragEvent.X - pDragEvent.startX + StartPosition.X;
+                    float y = pDragEvent.Y - pDragEvent.startY + StartPosition.Y;
+                    Position = new Vector2(x, y);
+                }
+                else if (pDragEvent.phase == EPhase.ended || pDragEvent.phase == EPhase.cancelled)
+                {
+                    isDragging = false;
+                    if (pDragEvent.phase == EPhase.cancelled)
+                    {
+                        Position = StartPosition;
+                    }
                 }
             }
-        }  
+        }
+
+        public void Update()
+        {
+
+        }
 
         public void Draw(SpriteBatch pSpriteBatch, SpriteFont pFont)
         {
@@ -83,7 +97,7 @@ namespace DungeonInventory
             {
                 Color c;
                 if (isDragging)
-                    c = Color.White * .5f;
+                    c = Color.White * 0.5f;
                 else
                     c = Color.White;
                 pSpriteBatch.Draw(Texture, Position, c);
@@ -92,11 +106,10 @@ namespace DungeonInventory
                 {
                     string sQte = Quantity.ToString();
                     Vector2 size = pFont.MeasureString(sQte);
-                    float x = Position.X + Texture.Width - size.X - 2;
-                    float y = Position.Y + Texture.Height - size.Y + 2;
-                    pSpriteBatch.DrawString(pFont, sQte, new Vector2(x, y), Color.White);
+                    pSpriteBatch.DrawString(pFont, sQte, new Vector2(Position.X + Texture.Width - size.X - 2, Position.Y + Texture.Height - size.Y + 2), Color.White);
                 }
             }
         }
     }
+
 }

@@ -1,15 +1,15 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Gamecodeur;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-//using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MapTools
+namespace GameCodeur
 {
     public delegate void onCellSelect(Cell cell, int pLine, int pColumn);
 

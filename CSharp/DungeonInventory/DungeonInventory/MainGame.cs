@@ -1,4 +1,4 @@
-﻿using MapTools;
+﻿using GameCodeur;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -7,12 +7,11 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Text;
-using System.Threading;
 using System.Windows.Forms;
 
 using xnai = Microsoft.Xna.Framework.Input;
 
-namespace DungeonInventory
+namespace Dungeon
 {
     /// <summary>
     /// This is the main type for your game.
@@ -60,8 +59,11 @@ namespace DungeonInventory
         private OpenFileDialog openFileDialog;
         private SaveFileDialog saveFileDialog;
 
-        private OverlayInventory inventoryDisplay;
+        private Character MainCharacter;
+
         private InventoryManager inventoryManager;
+        private OverlayInventory inventoryDisplay;
+        private OverlayCharacterSheet characterSheet;
 
         private void CenterMouse()
         {
@@ -72,6 +74,9 @@ namespace DungeonInventory
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            MainCharacter = new Character("RAGDNAR");
+            MainCharacter.Genere();
         }
 
         /// <summary>
@@ -119,12 +124,30 @@ namespace DungeonInventory
 
             mapEditor = new OverlayMapEditor(this, 5, ref mapData);
 
-            inventoryManager = new InventoryManager();
             ItemData.PopulateData();
+            inventoryManager = new InventoryManager();
 
+            ItemTextures.PopulateTextures(this);
+            inventoryDisplay = new OverlayInventory(this, ref inventoryManager, 441, 84);
 
-            inventoryDisplay = new OverlayInventory(this, inventoryManager, 441, 84);
-   
+            characterSheet = new OverlayCharacterSheet(this, MainCharacter);
+
+            inventoryManager.AddObject("ARROW", 3);
+            inventoryManager.AddObject("HAMMER", 1);
+            inventoryManager.AddObject("AXEBATTLE", 1);
+            inventoryManager.AddObject("ARROW", 5);
+            inventoryManager.AddObject("HAMMER", 1);
+            inventoryManager.AddObject("ARROW", 9);
+            inventoryManager.AddObject("HELMETPLATE", 1);
+            inventoryManager.AddObject("HELMETPLATEU", 1);
+            inventoryManager.AddObject("SHIELDSTEEL", 1);
+            inventoryManager.AddObject("ARMORCLOTHLUXURY", 1);
+            inventoryManager.AddObject("ARMORCLOTHTORN", 1);
+            inventoryManager.AddObject("DAGGER", 1);
+            inventoryManager.AddObject("BOOTCLOTH", 1);
+            inventoryDisplay.PopulateIcons();
+
+            inventoryDisplay.DropDelegate = onItemDrop;
 
             base.Initialize();
         }
@@ -163,16 +186,6 @@ namespace DungeonInventory
                 mapEditor.AddTile(i, Content.Load<Texture2D>("tile_" + i));
             }
             mapEditor.UpdateGrid();
-
-            ItemTextures.PopulateTextures(this);
-            inventoryManager.AddObject("HAMMER", 1);
-            inventoryManager.AddObject("DAGGER", 1);
-            inventoryManager.AddObject("SHIELDSTEEL", 1);
-            inventoryManager.AddObject("HELMETPLATEU", 1);
-            inventoryManager.AddObject("ARROW", 5);
-            inventoryManager.AddObject("ARROW", 3);
-            inventoryManager.AddObject("ARROW", 7);
-            inventoryDisplay.Populate();
         }
 
         /// <summary>
@@ -182,6 +195,12 @@ namespace DungeonInventory
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
+        }
+
+        private void onItemDrop(Item pItem)
+        {
+            Debug.WriteLine("Drop outside");
+            characterSheet.Equip(pItem.ID);
         }
 
         private void UpdateGameplay(GameTime gameTime)
@@ -287,6 +306,8 @@ namespace DungeonInventory
             }
             else
             {
+                if (characterSheet.isActive)
+                    characterSheet.Update();
                 if (mapEditor.isActive)
                     mapEditor.Update();
                 if (inventoryDisplay.isActive)
@@ -305,76 +326,61 @@ namespace DungeonInventory
             if (newKBState.IsKeyDown(xnai.Keys.I) && !oldKBState.IsKeyDown(xnai.Keys.I) && !mapEditor.isActive)
             {
                 inventoryDisplay.Active();
+                characterSheet.Active();
                 IsMouseVisible = inventoryDisplay.isActive;
                 CenterMouse();
             }
 
-                if (newKBState.IsKeyDown(xnai.Keys.S) && !oldKBState.IsKeyDown(xnai.Keys.S) && mapEditor.isActive)
+            if (newKBState.IsKeyDown(xnai.Keys.E) && !oldKBState.IsKeyDown(xnai.Keys.E) && inventoryDisplay.isActive)
             {
-                Thread t = new Thread((ThreadStart)(() =>
+                characterSheet.Equip("HELMETPLATE");
+            }
+
+            if (newKBState.IsKeyDown(xnai.Keys.S) && !oldKBState.IsKeyDown(xnai.Keys.S) && mapEditor.isActive)
+            {
+                // Show the dialog and get result.
+                saveFileDialog = new SaveFileDialog();
+                saveFileDialog.AddExtension = true;
+                saveFileDialog.DefaultExt = ".map";
+                saveFileDialog.Filter = "*Map Json|*.map";
+                DialogResult result = saveFileDialog.ShowDialog();
+                if (result == DialogResult.OK) // Test result.
                 {
-                    saveFileDialog = new SaveFileDialog(); //
-                    //saveFileDialog.InitialDirectory = "C:\\Users\\33677\\Documents\\projets\\git\\gameCodeur\\CSharp\\Cube3D\\Cube3D\\Content";
-                    saveFileDialog.InitialDirectory = "C:\\Users\\33677\\Documents\\projets";
-                    saveFileDialog.AddExtension = true;
-                    saveFileDialog.DefaultExt = ".map";
-                    saveFileDialog.Filter = "Map Editor JSON (*.map)|*.map";
-                    //saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                    saveFileDialog.FilterIndex = 2;
-
-                    DialogResult result = saveFileDialog.ShowDialog();
-                    if (result == DialogResult.OK)
-                    {
-                        Debug.WriteLine("File Name: " + saveFileDialog.FileName);
-                        MapJSON json = new MapJSON();
-                        json.ConvertForWrite(mapData);
-                        MemoryStream stream = new MemoryStream();
-                        DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(MapJSON));
-                        ser.WriteObject(stream, json);
-                        stream.Position = 0;
-                        StreamReader sr = new StreamReader(stream);
-                        string strmap = sr.ReadToEnd();
-                        Debug.WriteLine(strmap);
-                        File.WriteAllText(saveFileDialog.FileName, strmap);
-                        //sr.Close();
-
-                    }
-                }));
-                t.SetApartmentState(ApartmentState.STA);
-                t.Start();
-                t.Join();
+                    Console.WriteLine(saveFileDialog.FileName);
+                    MapJSON json = new MapJSON();
+                    json.ConvertForWrite(mapData);
+                    MemoryStream stream = new MemoryStream();
+                    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(MapJSON));
+                    ser.WriteObject(stream, json);
+                    stream.Position = 0;
+                    StreamReader sr = new StreamReader(stream);
+                    string strMap = sr.ReadToEnd();
+                    Debug.WriteLine(strMap);
+                    File.WriteAllText(saveFileDialog.FileName, strMap);
+                }
             }
 
             if (newKBState.IsKeyDown(xnai.Keys.O) && !oldKBState.IsKeyDown(xnai.Keys.O))
             {
-                Debug.WriteLine("File Open !!!!!!! ");
-                Thread t = new Thread((ThreadStart)(() =>
+                // Show the dialog and get result.
+                openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "*Map Json|*.map";
+                DialogResult result = openFileDialog.ShowDialog();
+                if (result == DialogResult.OK) // Test result.
                 {
-                    openFileDialog = new OpenFileDialog(); //
-                    openFileDialog.InitialDirectory = "C:\\Users\\33677\\Documents\\projets";
-                    openFileDialog.AddExtension = true;
-                    openFileDialog.DefaultExt = ".map";
-                    openFileDialog.Filter = "Map Editor JSON (*.map)|*.map";
-                    //saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                    openFileDialog.FilterIndex = 2;
-
-                    DialogResult result = openFileDialog.ShowDialog();
-                    if (result == DialogResult.OK)
+                    Console.WriteLine(openFileDialog.FileName);
+                    // Creation d'un MemoryStream depuis un fichier
+                    MapJSON mapJSON;
+                    using (MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(File.ReadAllText(openFileDialog.FileName))))
                     {
-                        Debug.WriteLine("File Name: " + openFileDialog.FileName);
-                        //jsonTools.ReadJSON(ref mapData, openFileDialog.FileName);
-                        MapJSON json;
-                        MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(File.ReadAllText(openFileDialog.FileName)));
+                        // Desérialisation 
                         DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(MapJSON));
-                        json = (MapJSON)ser.ReadObject(stream);
-                        json.ConvertForRead(ref mapData);
+                        mapJSON = (MapJSON)ser.ReadObject(stream);
+                        mapJSON.ConvertForRead(ref mapData);
                         mapEditor.UpdateGrid();
                         CenterMouse();
                     }
-                }));
-                t.SetApartmentState(ApartmentState.STA);
-                t.Start();
-                t.Join();
+                }
             }
 
             oldKBState = newKBState;
@@ -396,6 +402,7 @@ namespace DungeonInventory
                     effect.FogEnabled = true;
                     effect.FogStart = 2;
                     effect.FogEnd = 20;
+                    effect.Alpha = 1.0f;
                 }
                 mesh.Draw();
             }
@@ -458,6 +465,9 @@ namespace DungeonInventory
             }
 
             spriteBatch.Begin();
+
+            if (characterSheet.isActive)
+                characterSheet.Draw(spriteBatch, Font);
 
             if (mapEditor.isActive)
                 mapEditor.Draw(spriteBatch, Font);

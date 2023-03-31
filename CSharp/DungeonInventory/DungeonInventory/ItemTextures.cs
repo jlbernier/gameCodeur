@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DungeonInventory
+namespace Dungeon
 {
     public static class ItemTextures
     {
         public static Dictionary<string, Texture2D> Textures = new Dictionary<string, Texture2D>();
-        public static void PopulateTextures(Game pGame) 
+
+        public static void PopulateTextures(Game pGame)
         {
             Textures.Add("HAMMER", pGame.Content.Load<Texture2D>("icons/2HHammer_normal"));
             Textures.Add("ARROW", pGame.Content.Load<Texture2D>("icons/Arrow"));
